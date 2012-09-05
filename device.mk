@@ -247,6 +247,10 @@ PRODUCT_BOOT_JARS += qcmediaplayer
 PRODUCT_PACKAGES += \
     power.msm8974
 
+# LibPower
+PRODUCT_PACKAGES += \
+    power.qcom
+
 # Lights
 PRODUCT_PACKAGES += \
     lights.msm8974
