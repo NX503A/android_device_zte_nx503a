@@ -176,9 +176,11 @@ include hardware/broadcom/wlan/bcmdhd/config/config-bcm.mk
 # Media profile
 PRODUCT_COPY_FILES += \
     frameworks/av/media/libstagefright/data/media_codecs_google_audio.xml:system/etc/media_codecs_google_audio.xml \
-    frameworks/av/media/libstagefright/data/media_codecs_google_telephony.xml:system/etc/media_codecs_google_telephony.xml \
-    $(LOCAL_PATH)/configs/media_profiles.xml:system/etc/media_profiles.xml \
-    $(LOCAL_PATH)/configs/media_codecs.xml:system/etc/media_codecs.xml
+    frameworks/av/media/libstagefright/data/media_codecs_google_telephony.xml:system/etc/media_codecs_google_telephony.xml
+
+# media_profiles and media_codecs xmls for 8974
+PRODUCT_COPY_FILES += device/zte/nx503a/media/media_profiles_8974.xml:system/etc/media_profiles.xml \
+                      device/zte/nx503a/media/media_codecs_8974.xml:system/etc/media_codecs.xml
 
 ifeq ($(TARGET_DEVICE_NAME_LOW_END),true)
 PRODUCT_COPY_FILES += \
