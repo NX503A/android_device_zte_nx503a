@@ -129,6 +129,9 @@ persist.sys.wifi.softapname=ZTE Z5S
 av.offload.enable=true
 av.streaming.offload.enable=true
 
+#enable voice path for PCM VoIP by default
+use.voice.path.for.pcm.voip=true
+
 #hwui properties
 ro.hwui.texture_cache_size=72
 ro.hwui.layer_cache_size=48
