@@ -285,6 +285,9 @@ service usbhub_init /system/bin/usbhub_init
 on property:sys.boot_completed=1
     write /dev/kmsg "Boot completed "
 
+on property:sys.boot_completed=1
+    write /dev/kmsg "Boot completed "
+
 on property:persist.radio.atfwd.start=false
     stop atfwd
 
