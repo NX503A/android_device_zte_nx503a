@@ -613,3 +613,13 @@ service time_daemon /system/bin/time_daemon
     class late_start
     user root
     group root
+
+service qbcharger /charger -m 1
+    disabled
+    oneshot
+
+on property:sys.qbcharger.enable=true
+    start qbcharger
+
+on property:sys.qbcharger.enable=false
+    stop qbcharger
