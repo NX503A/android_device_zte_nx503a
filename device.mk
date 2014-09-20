@@ -198,6 +198,14 @@ PRODUCT_PACKAGES += \
     libnetcmdiface \
     libnl_2
 
+#Disable QC Oem Hook
+PRODUCT_PROPERTY_OVERRIDES += \
+    persist.radio.oem_socket=false
+
+#Support for graceful UICC Vltg supply deact
+PRODUCT_PROPERTY_OVERRIDES += \
+    persist.qcril_uim_vcc_feature=1
+
 # Wifi direct
 PRODUCT_PACKAGES += \
     crda \
