@@ -212,6 +212,9 @@ PRODUCT_PACKAGES += \
     libnetcmdiface \
     libnl_2
 
+PRODUCT_PROPERTY_OVERRIDES += \
+    persist.radio.no_wait_for_card=1
+
 #Disable QC Oem Hook
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.radio.oem_socket=false
