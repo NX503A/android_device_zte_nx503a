@@ -60,6 +60,8 @@ on fs
 
     restorecon_recursive   /persist
     mkdir /persist/data 0700 system system
+    mkdir /persist/data/sfs 0700 system system
+    mkdir /persist/data/tz 0700 system system
 
 on early-boot
     # set RLIMIT_MEMLOCK to 64MB
