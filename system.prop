@@ -116,7 +116,7 @@ persist.sys.wfd.zte_resolution=2
 #property this is device support wfd 1080p output support(true)  not support(false)
 persist.sys.wfd.1080p_support=true
 
-tunnel.audio.encode = true
+tunnel.audio.encode = false
 
 #Buffer size in kbytes for compress offload playback
 audio.offload.buffer.size.kb=32
