@@ -272,7 +272,6 @@ PRODUCT_PACKAGES += \
 
 # for off charging mode
 PRODUCT_PACKAGES += \
-    charger \
     charger_res_images
     
 # Camera2 API
