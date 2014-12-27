@@ -254,11 +254,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     com.android.future.usb.accessory
 
-# Qualcomm Random Numbers Generator
-PRODUCT_PACKAGES += \
-    qrngd \
-    qrngp
-
 PRODUCT_PACKAGES += \
     libemoji \
     libion
