@@ -69,7 +69,7 @@
     <ctl name="AUX_PCM_RX Audio Mixer MultiMedia5" value="0" />
     <ctl name="MultiMedia1 Mixer AUX_PCM_TX" value="0" />
     <!-- Voice BTSCO -->
-        <ctl name="Internal BTSCO SampleRate" value="8000" />
+        <ctl name="Internal BTSCO SampleRate" value="BTSCO_RATE_8KHZ" />
         <ctl name="Voice Stub Tx Mixer AUX_PCM_UL_TX" value="0" />
         <ctl name="SLIMBUS_1_RX Mixer Voice Stub" value="0" />
         <ctl name="Voice Stub Tx Mixer SLIM_1_TX" value="0" />
@@ -78,7 +78,7 @@
         <ctl name="AUXPCM_RX Port Mixer SLIM_1_TX" value="0" />
         <ctl name="SLIMBUS_3_RX_Voice Mixer Voice Stub" value="0" />
         <ctl name="SLIMBUS_3_RX Port Mixer AUX_PCM_DL_RX" value="0" />
-    <ctl name="Internal BTSCO SampleRate" value="8000" />
+    <ctl name="Internal BTSCO SampleRate" value="BTSCO_RATE_8KHZ" />
     <ctl name="AUX_PCM_RX_Voice Mixer CSVoice" value="0" />
     <ctl name="AUX_PCM_RX Audio Mixer Multimedia6" value="0" />
     <ctl name="MultiMedia6 Mixer SLIM_0_TX" value="0" />
@@ -303,7 +303,7 @@
 
     <!-- BT SCO WB Sample Rate -->
     <path name="bt-sco-wb-samplerate">
-        <ctl name="Internal BTSCO SampleRate" value="16000" />
+        <ctl name="Internal BTSCO SampleRate" value="BTSCO_RATE_16KHZ" />
     </path>
 
     <!-- These are audio route (FE to BE) specific mixer settings -->
@@ -325,7 +325,7 @@
     </path>
 
     <path name="deep-buffer-playback bt-sco-wb">
-        <ctl name="Internal BTSCO SampleRate" value="16000" />
+        <ctl name="Internal BTSCO SampleRate" value="BTSCO_RATE_16KHZ" />
         <path name="deep-buffer-playback bt-sco" />
     </path>
 
@@ -359,7 +359,7 @@
     </path>
 
     <path name="low-latency-playback bt-sco-wb">
-        <ctl name="Internal BTSCO SampleRate" value="16000" />
+        <ctl name="Internal BTSCO SampleRate" value="BTSCO_RATE_16KHZ" />
         <path name="low-latency-playback bt-sco" />
     </path>
 
@@ -406,7 +406,7 @@
     </path>
 
     <path name="compress-offload-playback bt-sco-wb">
-        <ctl name="Internal BTSCO SampleRate" value="16000" />
+        <ctl name="Internal BTSCO SampleRate" value="BTSCO_RATE_16KHZ" />
         <path name="compress-offload-playback bt-sco" />
     </path>
 
@@ -445,7 +445,7 @@
     </path>
 
     <path name="audio-record bt-sco-wb">
-        <ctl name="Internal BTSCO SampleRate" value="16000" />
+        <ctl name="Internal BTSCO SampleRate" value="BTSCO_RATE_16KHZ" />
         <path name="audio-record bt-sco" />
     </path>
 
@@ -462,7 +462,7 @@
     </path>
 
     <path name="audio-record-compress bt-sco-wb">
-        <ctl name="Internal BTSCO SampleRate" value="16000" />
+        <ctl name="Internal BTSCO SampleRate" value="BTSCO_RATE_16KHZ" />
         <path name="audio-record-compress bt-sco" />
     </path>
 
@@ -490,7 +490,7 @@
     </path>
 
     <path name="voice-call bt-sco-wb">
-        <ctl name="Internal BTSCO SampleRate" value="16000" />
+        <ctl name="Internal BTSCO SampleRate" value="BTSCO_RATE_16KHZ" />
         <path name="voice-call bt-sco" />
     </path>
 
@@ -515,7 +515,7 @@
     </path>
 
     <path name="voice2-call bt-sco-wb">
-        <ctl name="Internal BTSCO SampleRate" value="16000" />
+        <ctl name="Internal BTSCO SampleRate" value="BTSCO_RATE_16KHZ" />
         <path name="voice2-call bt-sco" />
     </path>
 
@@ -562,7 +562,7 @@
         <ctl name="SLIMBUS_DL_HL Switch" value="1" />
    </path>
    <path name="hfp-sco-wb">
-        <ctl name="Internal BTSCO SampleRate" value="16000" />
+        <ctl name="Internal BTSCO SampleRate" value="BTSCO_RATE_16KHZ" />
         <path name="hfp-sco" />
    </path>
 
@@ -713,7 +713,7 @@
     </path>
 
     <path name="volte-call bt-sco-wb">
-        <ctl name="Internal BTSCO SampleRate" value="16000" />
+        <ctl name="Internal BTSCO SampleRate" value="BTSCO_RATE_16KHZ" />
         <path name="volte-call bt-sco" />
     </path>
 
@@ -733,7 +733,7 @@
     </path>
 
     <path name="compress-voip-call bt-sco-wb">
-        <ctl name="Internal BTSCO SampleRate" value="16000" />
+        <ctl name="Internal BTSCO SampleRate" value="BTSCO_RATE_16KHZ" />
         <path name="compress-voip-call bt-sco" />
     </path>
 
@@ -795,7 +795,7 @@
     </path>
 
     <path name="qchat-call bt-sco-wb">
-        <ctl name="Internal BTSCO SampleRate" value="16000" />
+        <ctl name="Internal BTSCO SampleRate" value="BTSCO_RATE_16KHZ" />
         <path name="qchat-call bt-sco" />
     </path>
 
@@ -1175,7 +1175,7 @@
     </path>
 
     <path name="bt-sco-headset">
-        <ctl name="Internal BTSCO SampleRate" value="8000" />
+        <ctl name="Internal BTSCO SampleRate" value="BTSCO_RATE_8KHZ" />
         <ctl name="Voice Stub Tx Mixer AUX_PCM_UL_TX" value="1" />
         <ctl name="SLIMBUS_1_RX Mixer Voice Stub" value="1" />
         <ctl name="Voice Stub Tx Mixer SLIM_1_TX" value="1" />
@@ -1188,7 +1188,7 @@
     </path>
 
     <path name="bt-sco-mic">
-        <ctl name="Internal BTSCO SampleRate" value="8000" />
+        <ctl name="Internal BTSCO SampleRate" value="BTSCO_RATE_8KHZ" />
         <ctl name="Voice Stub Tx Mixer AUX_PCM_UL_TX" value="1" />
         <ctl name="SLIMBUS_1_RX Mixer Voice Stub" value="1" />
         <ctl name="Voice Stub Tx Mixer SLIM_1_TX" value="1" />
