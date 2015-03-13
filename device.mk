@@ -360,7 +360,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
     wifi.supplicant_scan_interval=15
 
 PRODUCT_PROPERTY_OVERRIDES += \
-    persist.radio.no_wait_for_card=1
+    persist.radio.no_wait_for_card=1 \
+    ro.frp.pst=/dev/block/bootdevice/by-name/config
 
 # Device uses high-density artwork where available
 PRODUCT_AAPT_CONFIG := normal ldpi mdpi tvdpi hdpi xhdpi xxhdpi xxxhdpi
