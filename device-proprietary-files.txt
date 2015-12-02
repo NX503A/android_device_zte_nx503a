@@ -22,6 +22,11 @@ vendor/lib/libRSDriver_adreno.so
 vendor/lib/libsc-a3xx.so
 vendor/lib/libscale.so
 
+# Bluetooth
+bin/btnvtool
+bin/hci_qcomm_init
+vendor/lib/libbtnv.so
+
 # RIL
 -app/qcrilmsgtunnel.apk
 bin/netmgrd
