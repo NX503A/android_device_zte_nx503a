@@ -88,6 +88,10 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/sap.conf:system/etc/sap.conf \
     $(LOCAL_PATH)/configs/sec_config:system/etc/sec_config
 
+# Power
+PRODUCT_PACKAGES += \
+    power.msm8974
+
 # WiFi
 PRODUCT_PACKAGES += \
     libnetcmdiface \
