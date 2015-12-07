@@ -27,7 +27,7 @@ BOARD_USES_QC_TIME_SERVICES := true
 BOARD_KERNEL_BASE := 0x00000000
 BOARD_KERNEL_PAGESIZE := 2048
 
-BOARD_KERNEL_CMDLINE := console=null androidboot.hardware=qcom user_debug=31 msm_rtb.filter=0x37 ehci-hcd.park=3 androidboot.selinux=disabled
+BOARD_KERNEL_CMDLINE := console=null androidboot.hardware=qcom user_debug=31 msm_rtb.filter=0x37 ehci-hcd.park=3 androidboot.selinux=permissive
 BOARD_MKBOOTIMG_ARGS := --ramdisk_offset 0x2000000 --tags_offset 0x01E00000 
 BOARD_KERNEL_IMAGE_NAME := zImage-dtb
 
@@ -105,8 +105,44 @@ BOARD_HAL_STATIC_LIBRARIES := libhealthd.qcom
 # liblight HAL
 TARGET_PROVIDES_LIBLIGHT := true
 
-# SELinux
+# SELinux policies
+# QCOM
 include device/qcom/sepolicy/sepolicy.mk
+
+# Board
+BOARD_SEPOLICY_DIRS += \
+    device/zte/nx503a/sepolicy
+
+BOARD_SEPOLICY_UNION += \
+    app.te \
+    bluetooth.te \
+    bluetooth_loader.te \
+    bridge.te \
+    file.te \
+    healthd.te \
+    hostapd.te \
+    mediaserver.te \
+    mm-qcamerad.te \
+    mpdecision.te \
+    netmgrd.te \
+    platform_app.te \
+    qmuxd.te \
+    qseecomd.te \
+    radio.te \
+    rild.te \
+    rmt_storage.te \
+    sensors.te \
+    subsystem_ramdump.te \
+    system_app.te \
+    system_server.te \
+    thermal-engine.te \
+    ueventd.te \
+    untrusted_app.te \
+    vold.te \
+    vss.te \
+    wpa.te \
+    file_contexts \
+    genfs_contexts
 
 # Enable Minikin text layout engine (will be the default soon)
 USE_MINIKIN := true
