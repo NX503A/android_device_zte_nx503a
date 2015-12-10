@@ -84,6 +84,10 @@ PRODUCT_PACKAGES += \
     mm-jpeg-interface-test \
     mm-qcamera-app
 
+# Keystore
+PRODUCT_PACKAGES += \
+    keystore.msm8974
+
 # Thermal-engine
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/thermal-engine-8974.conf:system/etc/thermal-engine-8974.conf
