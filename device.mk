@@ -80,7 +80,9 @@ PRODUCT_COPY_FILES += \
 
 # Camera
 PRODUCT_PACKAGES += \
-    camera.msm8974
+    camera.msm8974 \
+    mm-jpeg-interface-test \
+    mm-qcamera-app
 
 # Thermal-engine
 PRODUCT_COPY_FILES += \
