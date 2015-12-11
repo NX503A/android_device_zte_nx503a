@@ -241,3 +241,6 @@ persist.sys.isUsbOtgEnabled=1
 
 # Fix for Google Cardboard
 qemu.sf.lcd_density=480
+
+#add bt mac addr
+ro.bt.bdaddr_path=/persist/.bt_nv.bin
