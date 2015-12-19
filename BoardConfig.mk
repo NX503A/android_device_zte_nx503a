@@ -113,37 +113,6 @@ include device/qcom/sepolicy/sepolicy.mk
 BOARD_SEPOLICY_DIRS += \
     device/zte/nx503a/sepolicy
 
-BOARD_SEPOLICY_UNION += \
-    app.te \
-    bluetooth.te \
-    bluetooth_loader.te \
-    bridge.te \
-    file.te \
-    healthd.te \
-    hostapd.te \
-    mediaserver.te \
-    mm-qcamerad.te \
-    mpdecision.te \
-    netmgrd.te \
-    platform_app.te \
-    qmuxd.te \
-    qseecomd.te \
-    radio.te \
-    rild.te \
-    rmt_storage.te \
-    sensors.te \
-    subsystem_ramdump.te \
-    system_app.te \
-    system_server.te \
-    thermal-engine.te \
-    ueventd.te \
-    untrusted_app.te \
-    vold.te \
-    vss.te \
-    wpa.te \
-    file_contexts \
-    genfs_contexts
-
 # Enable Minikin text layout engine (will be the default soon)
 USE_MINIKIN := true
 
