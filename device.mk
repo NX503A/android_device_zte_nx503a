@@ -153,34 +153,31 @@ PRODUCT_PACKAGES += \
     tinyplay \
     tinypcminfo
 
-# Display
+# Graphics
 PRODUCT_PACKAGES += \
-    libgenlock \
-    liboverlay \
-    libmemalloc \
-    libqdutils \
-    hwcomposer.msm8974 \
-    gralloc.msm8974 \
     copybit.msm8974 \
-    memtrack.msm8974
+    gralloc.msm8974 \
+    hwcomposer.msm8974 \
+    memtrack.msm8974 \
+    liboverlay
 
-# Omx
+# Media
 PRODUCT_PACKAGES += \
+    libc2dcolorconvert \
+    libdivxdrmdecrypt \
+    libdashplayer \
     libOmxAacEnc \
     libOmxAmrEnc \
     libOmxCore \
     libOmxEvrcEnc \
     libOmxQcelp13Enc \
     libOmxVdec \
-    libOmxVenc \
-    libc2dcolorconvert \
     libOmxVdecHevc \
-    libdashplayer \
-    libdivxdrmdecrypt \
-    libmm-omxcore \
+    libOmxVenc \
     libstagefrighthw \
-    libtilerenderer \
-    libI420colorconvert
+    qcmediaplayer
+
+PRODUCT_BOOT_JARS += qcmediaplayer
 
 # Power
 PRODUCT_PACKAGES += \
@@ -242,13 +239,6 @@ PRODUCT_PACKAGES += \
     MagicSmokeWallpapers \
     VisualizationWallpapers \
     librs_jni
-
-# Extended media support
-PRODUCT_PACKAGES += \
-    qcmediaplayer
-
-PRODUCT_BOOT_JARS += \
-    qcmediaplayer
 
 PRODUCT_PACKAGES += \
     qcom.fmradio \
