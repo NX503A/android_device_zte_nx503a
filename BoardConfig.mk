@@ -45,8 +45,8 @@ BOARD_KERNEL_PAGESIZE := 2048
 BOARD_KERNEL_CMDLINE := console=null androidboot.hardware=qcom user_debug=31 msm_rtb.filter=0x37 ehci-hcd.park=3 androidboot.selinux=permissive
 BOARD_MKBOOTIMG_ARGS := --ramdisk_offset 0x2000000 --tags_offset 0x01E00000 
 BOARD_KERNEL_IMAGE_NAME := zImage-dtb
-TARGET_KERNEL_CONFIG := cyanogenmod_nx503a_defconfig
-TARGET_KERNEL_SOURCE := kernel/zte/nx503a
+TARGET_KERNEL_CONFIG := msm8974-NX503A_defconfig
+TARGET_KERNEL_SOURCE := kernel/nubia/nx503a
 BOARD_KERNEL_SEPARATED_DT := true
 DTS_NAME := msm8974-v2.2-mtp-NX503A
 BOARD_CUSTOM_BOOTIMG_MK := device/zte/nx503a/mkbootimg.mk
