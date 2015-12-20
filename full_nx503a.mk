@@ -10,8 +10,6 @@ PRODUCT_RESTRICT_VENDOR_FILES := false
 
 # Include all supported languages
 $(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
-PRODUCT_DEFAULT_LANGUAGE := ru
-PRODUCT_DEFAULT_REGION := RU
 
 $(call inherit-product, device/zte/nx503a/device.mk)
 $(call inherit-product, vendor/zte/nx503a/nx503a-vendor.mk)
