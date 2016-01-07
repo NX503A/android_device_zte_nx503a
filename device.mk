@@ -65,14 +65,6 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/com.nxp.mifare.xml:system/etc/permissions/com.nxp.mifare.xml \
     frameworks/native/data/etc/handheld_core_hardware.xml:system/etc/permissions/handheld_core_hardware.xml
 
-# Custom init / uevent
-PRODUCT_COPY_FILES += \
-     $(LOCAL_PATH)/configs/fstab.qcom:root/fstab.qcom \
-     $(LOCAL_PATH)/configs/init.qcom.rc:root/init.qcom.rc \
-     $(LOCAL_PATH)/configs/init.qcom.usb.rc:root/init.qcom.usb.rc \
-     $(LOCAL_PATH)/configs/init.recovery.qcom.rc:root/init.recovery.qcom.rc \
-     $(LOCAL_PATH)/configs/ueventd.qcom.rc:root/ueventd.qcom.rc
-
 # Key layouts and touchscreen
 PRODUCT_COPY_FILES += \
      $(LOCAL_PATH)/configs/atmel_mxt_ts.kl:system/usr/keylayout/atmel_mxt_ts.kl \
@@ -117,6 +109,14 @@ PRODUCT_COPY_FILES += \
 # Power
 PRODUCT_PACKAGES += \
     power.msm8974
+
+# Ramdisk
+PRODUCT_PACKAGES += \
+    fstab.qcom \
+    init.qcom.rc \
+    init.qcom.usb.rc \
+    init.recovery.qcom.rc \
+    ueventd.qcom.rc
 
 # WiFi
 PRODUCT_PACKAGES += \

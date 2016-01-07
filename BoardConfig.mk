@@ -130,7 +130,7 @@ EXTENDED_FONT_FOOTPRINT := true
 BOARD_HARDWARE_CLASS := device/zte/nx503a/cmhw
 
 # Recovery
-TARGET_RECOVERY_FSTAB := device/zte/nx503a/configs/fstab.qcom
+TARGET_RECOVERY_FSTAB := device/zte/nx503a/rootdir/etc/fstab.qcom
 BOARD_RECOVERY_SWIPE := true
 TARGET_RECOVERY_PIXEL_FORMAT := "RGBX_8888"
 TARGET_USERIMAGES_USE_EXT4 := true
