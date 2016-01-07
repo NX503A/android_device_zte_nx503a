@@ -1,0 +1,4 @@
+# WiFi firmware
+etc/firmware/bcm4339/fw_bcmdhd_apsta.bin
+etc/firmware/bcm4339/fw_bcmdhd_apsta.bin:etc/firmware/bcm4339/fw_bcmdhd.bin
+etc/firmware/bcm4339/fw_bcmdhd_p2p.bin
