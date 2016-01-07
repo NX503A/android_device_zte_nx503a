@@ -116,6 +116,7 @@ PRODUCT_PACKAGES += \
     init.mdm.sh \
     init.nubia.sh \
     init.nubia.usb.rc \
+    init.project.rc \
     init.qcom.early_boot.sh \
     init.qcom.rc \
     init.qcom.ssr.sh \
@@ -123,6 +124,8 @@ PRODUCT_PACKAGES += \
     init.qcom.usb.rc \
     init.qcom.usb.sh \
     init.recovery.qcom.rc \
+    init.rom.rc \
+    init.target.rc \
     ueventd.qcom.rc
 
 # WiFi
