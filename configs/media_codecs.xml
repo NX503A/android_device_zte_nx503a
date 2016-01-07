@@ -158,4 +158,5 @@
         </MediaCodec>
         <!-- DOLBY_UDC_END -->
     </Decoders>
+    <Include href="media_codecs_ffmpeg.xml" />
 </CodecList>

@@ -135,8 +135,9 @@ PRODUCT_COPY_FILES += \
 
 include hardware/broadcom/wlan/bcmdhd/config/config-bcm.mk
 
-# Media
+# Media profile
 PRODUCT_COPY_FILES += \
+    frameworks/av/media/libstagefright/data/media_codecs_ffmpeg.xml:system/etc/media_codecs_ffmpeg.xml \
     $(LOCAL_PATH)/configs/media_profiles.xml:system/etc/media_profiles.xml \
     $(LOCAL_PATH)/configs/media_codecs.xml:system/etc/media_codecs.xml
 
