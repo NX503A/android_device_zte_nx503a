@@ -64,6 +64,19 @@ vendor/lib/libWVStreamControlAPI_L3.so
 vendor/lib/drm/libdrmwvmplugin.so
 vendor/lib/mediadrm/libwvdrmengine.so
 
+# exfat
+bin/exfat
+bin/exfatck
+bin/exfatdebug
+bin/exfat-dump
+bin/exfat-fsck
+bin/exfatinfo
+bin/exfatlabel
+bin/exfat-label
+bin/exfat-mkfs
+bin/mkexfat
+lib/modules/texfat.ko
+
 # RIL
 -app/qcrilmsgtunnel.apk
 bin/netmgrd
