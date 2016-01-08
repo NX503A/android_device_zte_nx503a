@@ -77,6 +77,11 @@ bin/exfat-mkfs
 bin/mkexfat
 lib/modules/texfat.ko
 
+# mm-pp-daemon
+bin/mm-pp-daemon
+vendor/lib/libmm-abl-oem.so
+vendor/lib/libmm-abl.so
+
 # RIL
 -app/qcrilmsgtunnel.apk
 bin/netmgrd
