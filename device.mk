@@ -121,6 +121,7 @@ PRODUCT_PACKAGES += \
     init.qcom.class_core.sh \
     init.qcom.early_boot.sh \
     init.qcom.rc \
+    init.qcom.sh \
     init.qcom.ssr.sh \
     init.qcom.syspart_fixup.sh \
     init.qcom.usb.rc \
