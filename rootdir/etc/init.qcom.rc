@@ -444,6 +444,16 @@ on property:sys.boot_completed=1
 on property:init.svc.bootanim=stopped
     write /sys/block/mmcblk0/queue/scheduler row
 
+service qcom-c_core-sh /system/bin/sh /init.qcom.class_core.sh
+    class core
+    user root
+    oneshot
+
+service qcom-c_main-sh /system/bin/sh /init.class_main.sh
+    class main
+    user root
+    oneshot
+
 service rmt_storage /system/bin/rmt_storage
     class core
     user root

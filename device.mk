@@ -113,10 +113,12 @@ PRODUCT_PACKAGES += \
 # Ramdisk
 PRODUCT_PACKAGES += \
     fstab.qcom \
+    init.class_main.sh \
     init.mdm.sh \
     init.nubia.sh \
     init.nubia.usb.rc \
     init.project.rc \
+    init.qcom.class_core.sh \
     init.qcom.early_boot.sh \
     init.qcom.rc \
     init.qcom.ssr.sh \
