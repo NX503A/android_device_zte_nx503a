@@ -28,8 +28,8 @@
 #
 
 # ZTEMT project customization
-import init.rom.rc
-import init.project.rc
+#import init.rom.rc
+#import init.project.rc
 
 on early-init
     mkdir /firmware 0771 system system
