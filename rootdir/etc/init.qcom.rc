@@ -26,27 +26,24 @@ on early-init
 
 on init
     # See storage config details at http://source.android.com/tech/storage/
-    chmod 0701 /mnt/media_rw
-    mkdir /mnt/shell 0700 shell shell
+    mkdir /mnt/media_rw/sdcard0 0700 media_rw media_rw
+    mkdir /mnt/media_rw/usbdisk 0700 media_rw media_rw
+
+    mkdir /storage/sdcard0 0700 root root
+    mkdir /storage/usbdisk 0700 root root
+
+    # for backwards compatibility
+    symlink /storage/sdcard0 /sdcard
+    symlink /storage/sdcard0 /mnt/sdcard
+    symlink /storage/usbdisk /usbdisk
+    symlink /storage/usbdisk /mnt/usbdisk
+
+    export EXTERNAL_STORAGE /storage/sdcard0
+    export SECONDARY_STORAGE /storage/usbdisk
 
     # Set permissions for persist partition
     mkdir /persist 0771 system system
     mkdir /firmware 0771 system system
-    mkdir /mnt/media_rw/sdcard0 0775 system system
-    mkdir /storage/sdcard0 0000 system system
-
-    mkdir /mnt/media_rw/usbdisk 0775 system system
-    mkdir /storage/usbdisk 0000 system system
-
-    export EXTERNAL_STORAGE /storage/sdcard0
-    export OTG_STORAGE /storage/usbdisk
-
-    # Support legacy paths
-    symlink /storage/sdcard0 /sdcard
-    symlink /storage/sdcard0 /mnt/sdcard
-    symlink /storage/sdcard0 /storage/sdcard0
-    symlink /storage/usbdisk /usbdisk
-    symlink /storage/usbdisk /mnt/usbdisk
 
     mkdir /tmp
     mount tmpfs tmpfs /tmp nosuid mode=0755,uid=0,gid=0
@@ -59,7 +56,6 @@ on init
 on fs
     mount_all ./fstab.qcom
     restorecon_recursive /persist
-    setprop ro.crypto.fuse_sdcard true
 
 on early-boot
     # set RLIMIT_MEMLOCK to 64MB
@@ -188,14 +184,14 @@ on property:persist.sys.image.enhance=i
     write /sys/kernel/lcd_enhance/saturation 26
 
 on post-fs-data
-    write /sys/kernel/boot_adsp/boot 1
     mkdir /data/tombstones 0771 system system
     mkdir /tombstones/modem 0771 system system
     mkdir /tombstones/lpass 0771 system system
     mkdir /tombstones/wcnss 0771 system system
     mkdir /tombstones/dsps 0771 system system
 
-    mkdir /data/media 0770 media_rw media_rw
+    # Set indication (checked by vold) that we have finished this action
+    setprop vold.post_fs_data_done 1
 
     # wifi
     chown wifi system /persist/wifi
@@ -622,13 +618,13 @@ service qseecomd /system/bin/qseecomd
     user root
     group root
 
-# virtual sdcard daemon running as media_rw (1023)
-service sdcard /system/bin/sdcard -u 1023 -g 1023 -d /mnt/media_rw/sdcard0 /storage/sdcard0
-    class late_start
-
-service fuse_usbdisk /system/bin/sdcard -u 1023 -g 1023 -w 1023 -d /mnt/media_rw/usbdisk /storage/usbdisk
+service fuse_sdcard0 /system/bin/sdcard -u 1023 -g 1023 -d /mnt/media_rw/sdcard0 /storage/sdcard0
     class late_start
     disabled
+
+service fuse_usbdisk /system/bin/sdcard -u 1023 -g 1023 -d /mnt/media_rw/usbdisk /storage/usbdisk
+	class late_start
+	disabled
 
 service charger /sbin/healthd -c
     class charger
