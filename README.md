@@ -27,3 +27,5 @@
     # mka bootimage
     # mka recoveryimage
 
+    # make installclean
+
