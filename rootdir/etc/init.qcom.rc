@@ -38,8 +38,8 @@ on init
 
     # ZTEMT: Start
     # See storage config details at http://source.android.com/tech/storage/
-    mkdir /storage/sdcard0 0700 system system
-    mkdir /storage/usba 0700 system system
+    mkdir /storage/sdcard0 0000 system system
+    mkdir /storage/usba 0000 system system
 
     mkdir /mnt/media_rw/sdcard0 0700 media_rw media_rw
     mkdir /mnt/media_rw/usba 0700 media_rw media_rw
@@ -50,6 +50,9 @@ on init
     # Support legacy paths
     symlink /storage/sdcard0 /sdcard
     symlink /storage/sdcard0 /mnt/sdcard
+
+    symlink /storage/usba /usba
+    symlink /storage/usba /mnt/usba
     # ZTEMT: End
 
 on fs
@@ -725,15 +728,7 @@ service fuse_sdcard0 /system/bin/sdcard -u 1023 -g 1023 -d /mnt/media_rw/sdcard0
     class late_start
     disabled
 
-service fuse_sdcard1 /system/bin/sdcard -u 1023 -g 1023 -d /mnt/media_rw/sdcard1 /storage/sdcard1
-    class late_start
-    disabled
-
 service fuse_usba /system/bin/sdcard -u 1023 -g 1023 -d /mnt/media_rw/usba /storage/usba
-    class late_start
-    disabled
-
-service fuse_usbb /system/bin/sdcard -u 1023 -g 1023 -d /mnt/media_rw/usbb /storage/usbb
     class late_start
     disabled
 
