@@ -106,6 +106,18 @@ PRODUCT_PACKAGES += \
     mm-jpeg-interface-test \
     mm-qcamera-app
 
+# Connectivity Engine support
+ifeq ($(BOARD_USES_QCNE),true)
+PRODUCT_PACKAGES += \
+    libcnefeatureconfig \
+    services-ext \
+    init.cne.rc
+
+PRODUCT_PROPERTY_OVERRIDES +=
+    persist.cne.feature=1
+
+endif
+
 # Keystore
 PRODUCT_PACKAGES += \
     keystore.msm8974

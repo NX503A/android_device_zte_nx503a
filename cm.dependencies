@@ -1,0 +1,6 @@
+[
+ {
+    "repository": "android_frameworks_opt_connectivity",
+    "target_path": "frameworks/opt/connectivity"
+ }
+]
