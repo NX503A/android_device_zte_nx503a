@@ -60,17 +60,8 @@ vidc.debug.level=1
 ro.use_data_netmgrd=true
 ro.data.large_tcp_window_size=true
 
-#Disable netmgr QoS, because it not supported in CM
-persist.data.netmgrd.qos.enable=false
-
 #system props for time-services
 persist.timed.enable=true
-
-#
-# system prop for opengles version
-#
-# 196608 is decimal for 0x30000 to report version 3
-ro.opengles.version=196608
 
 # System property for cabl
 ro.qualcomm.cabl=0
@@ -119,8 +110,6 @@ persist.sys.wfd.virtual=0
 persist.sys.wfd.wpssetup.type=1
 #property to set wfd output resolution is 1080P(0) / 720P(1) / 960*540(2) / 800*480(3)
 persist.sys.wfd.zte_resolution=2
-#property to show wfd sink false(0) / true(1)
-persist.sys.wfd.zsink_support=1
 #property this is device support wfd 1080p output support(true)  not support(false)
 persist.sys.wfd.1080p_support=true
 
@@ -139,9 +128,6 @@ persist.sys.wifi.softapname=ZTE Z5S
 #Enable offload audio video playback by default
 av.offload.enable=true
 av.streaming.offload.enable=true
-
-#enable voice path for PCM VoIP by default
-use.voice.path.for.pcm.voip=true
 
 #hwui properties
 ro.hwui.texture_cache_size=72
@@ -175,14 +161,8 @@ ro.sys.umsdirtyratio=20
 # Set default USB interface
 persist.sys.usb.config=mtp,adb
 
-# DPI
-ro.sf.lcd_density=480
-
 # Chip name
 ro.chipname=msm8974
-
-#Vendor lib
-ro.vendor.extension_library=/vendor/lib/libqc-opt.so
 
 # Upto 3 layers can go through overlays
 com.qc.hardware=true
@@ -241,6 +221,3 @@ persist.sys.isUsbOtgEnabled=1
 
 # Fix for Google Cardboard
 qemu.sf.lcd_density=480
-
-#add bt mac addr
-ro.bt.bdaddr_path=/persist/.bt_nv.bin

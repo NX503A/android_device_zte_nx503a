@@ -236,17 +236,6 @@ PRODUCT_PACKAGES += \
     libnetcmdiface \
     libnl_2
 
-PRODUCT_PROPERTY_OVERRIDES += \
-    persist.radio.no_wait_for_card=1
-
-#Disable QC Oem Hook
-PRODUCT_PROPERTY_OVERRIDES += \
-    persist.radio.oem_socket=false
-
-#Support for graceful UICC Vltg supply deact
-PRODUCT_PROPERTY_OVERRIDES += \
-    persist.qcril_uim_vcc_feature=1
-
 # Wifi direct
 PRODUCT_PACKAGES += \
     crda \
@@ -267,8 +256,6 @@ PRODUCT_PACKAGES += \
     VisualizationWallpapers \
     librs_jni
 
-#PRODUCT_BOOT_JARS += oem-services:nubia:nubia-common:qcom.fmradio:WfdCommon:org.codeaurora.Performance
-
 PRODUCT_PACKAGES += \
     qrngd \
     qrngp \
@@ -279,10 +266,63 @@ PRODUCT_PACKAGES += \
     charger \
     charger_res_images
 
-# Recovery Options
+# BT mac addr
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.bt.bdaddr_path=/persist/.bt_nv.bin
+
+# Enable voice path for PCM VoIP by default
+PRODUCT_PROPERTY_OVERRIDES += \
+    use.voice.path.for.pcm.voip=true
+
+# Disable QC Oem Hook
+PRODUCT_PROPERTY_OVERRIDES += \
+    persist.radio.oem_socket=false
+
+# Disable netmgr QoS, because it not supported in CM
+PRODUCT_PROPERTY_OVERRIDES += \
+    persist.data.netmgrd.qos.enable=false
+
+# Disable wlan suspend optimization
+PRODUCT_PROPERTY_OVERRIDES += \
+    persist.sys.wlan.optimize=false
+
+# Do not power down SIM card
+# when modem is sent to Low Power Mode.
+PRODUCT_PROPERTY_OVERRIDES += \
+    persist.radio.apm_sim_not_pwdn=1
+
+# DPI
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.sf.lcd_density=480
+
+# Opengles version
+# 196608 is decimal for 0x30000 to report version 3
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.opengles.version=196608
+
+# QCOM Perf lib
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.vendor.extension_library=/vendor/lib/libqc-opt.so
+
+# CWM Recovery Options
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.cwm.forbid_format=/persist,/firmware,/boot,/sbl1,/tz,/rpm,/sdi,/aboot,/splash,/custom \
     ro.cwm.forbid_mount=/persist,/firmware
+
+# Show wfd sink false(0) / true(1)
+PRODUCT_PROPERTY_OVERRIDES += \
+    persist.sys.wfd.zsink_support=0
+
+# Support for graceful UICC Vltg supply deact
+PRODUCT_PROPERTY_OVERRIDES += \
+    persist.qcril_uim_vcc_feature=1
+
+# System prop for NFC DT
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.nfc.port=I2C
+
+PRODUCT_PROPERTY_OVERRIDES += \
+    persist.radio.no_wait_for_card=1
 
 # Device uses high-density artwork where available
 PRODUCT_AAPT_CONFIG := normal ldpi mdpi tvdpi hdpi xhdpi xxhdpi xxxhdpi
