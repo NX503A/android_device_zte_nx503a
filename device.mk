@@ -104,8 +104,7 @@ PRODUCT_COPY_FILES += \
 # Camera
 PRODUCT_PACKAGES += \
     camera.msm8974 \
-    mm-jpeg-interface-test \
-    mm-qcamera-app
+    mm-jpeg-interface-test
 
 # Connectivity Engine support
 ifeq ($(BOARD_USES_QCNE),true)
