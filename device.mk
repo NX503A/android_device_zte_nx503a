@@ -92,6 +92,10 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/audio_effects_vendor.conf:system/vendor/etc/audio_effects.conf \
     $(LOCAL_PATH)/configs/mixer_paths.xml:system/etc/mixer_paths.xml
 
+# Set softkey
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/set_softkey.sh:system/etc/set_softkey.sh
+
 # Bluetooth
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/bluetooth/bt_vendor.conf:system/etc/bluetooth/bt_vendor.conf
