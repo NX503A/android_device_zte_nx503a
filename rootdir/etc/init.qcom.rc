@@ -289,6 +289,10 @@ on post-fs-data
     #Grant access to system UID for SMSC HUB sysfs entry
     chown system system /sys/bus/platform/devices/msm_smsc_hub/enable
 
+    # Key disabler
+    chown system system /sys/devices/gpio_keys.85/disabled_keys
+    chmod 0666 /sys/devices/gpio_keys.85/disabled_keys
+
 # Export GPIO56 for fusion targets to enable/disable hub
 service usbhub_init /system/bin/usbhub_init
    class late_start
@@ -680,7 +684,6 @@ service wifi-crda /system/bin/sh /system/etc/init.crda.sh
    user root
    disabled
    oneshot
-
 
 on property:sys.boot_completed=1
     start qcom-post-boot

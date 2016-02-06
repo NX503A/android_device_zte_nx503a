@@ -97,6 +97,10 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/init.qcom.sdio.sh:system/etc/init.qcom.sdio.sh \
     $(LOCAL_PATH)/configs/usf_post_boot.sh:system/etc/usf_post_boot.sh
 
+# Set softkey
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/set_softkey.sh:system/etc/set_softkey.sh
+
 # Bluetooth
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/bluetooth/bt_vendor.conf:system/etc/bluetooth/bt_vendor.conf
