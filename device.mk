@@ -337,7 +337,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # QCOM Perf lib
 PRODUCT_PROPERTY_OVERRIDES += \
-    ro.vendor.extension_library=/vendor/lib/libqc-opt.so
+    ro.vendor.extension_library=/vendor/lib/libqti-perfd-client.so
 
 # CWM Recovery Options
 PRODUCT_PROPERTY_OVERRIDES += \

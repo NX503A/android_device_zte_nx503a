@@ -1,0 +1,4 @@
+# Perf
+bin/mpdecision
+bin/perfd
+vendor/lib/libqti-perfd-client.so
