@@ -129,6 +129,36 @@ include device/qcom/sepolicy/sepolicy.mk
 BOARD_SEPOLICY_DIRS += \
     device/zte/nx503a/sepolicy
 
+BOARD_SEPOLICY_UNION += \
+    debuggerd.te \
+    dnsmasq.te \
+    file.te \
+    file_contexts \
+    healthd.te \
+    installd.te \
+    kernel.te \
+    keystore.te \
+    mediaserver.te \
+    mpdecision.te \
+    netd.te \
+    platform_app.te \
+    property.te \
+    property_contexts \
+    radio.te \
+    rmt_storage.te \
+    sensors.te \
+    servicemanager.te \
+    shell.te \
+    sysinit.te \
+    system_app.te \
+    system_server.te \
+    tee.te \
+    thermal-engine.te \
+    ueventd.te \
+    untrusted_app.te \
+    wcnss_service.te \
+    wpa.te
+
 # Enable Minikin text layout engine (will be the default soon)
 USE_MINIKIN := true
 
