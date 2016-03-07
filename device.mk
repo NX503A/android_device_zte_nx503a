@@ -111,18 +111,6 @@ PRODUCT_PACKAGES += \
     camera.msm8974 \
     mm-jpeg-interface-test
 
-# Connectivity Engine support
-ifeq ($(BOARD_USES_QCNE),true)
-PRODUCT_PACKAGES += \
-    libcnefeatureconfig \
-    services-ext \
-    init.cne.rc
-
-PRODUCT_PROPERTY_OVERRIDES +=
-    persist.cne.feature=1
-
-endif
-
 # Keystore
 PRODUCT_PACKAGES += \
     keystore.msm8974
