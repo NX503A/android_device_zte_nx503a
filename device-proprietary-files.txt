@@ -75,6 +75,11 @@ bin/exfat-mkfs
 bin/mkexfat
 lib/modules/texfat.ko
 
+# FM radio
+bin/fm_qsoc_patches
+bin/fmconfig
+etc/init.qcom.fm.sh
+
 # mm-pp-daemon
 bin/mm-pp-daemon
 vendor/lib/libmm-abl-oem.so

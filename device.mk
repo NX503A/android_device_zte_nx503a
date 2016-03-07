@@ -111,6 +111,13 @@ PRODUCT_PACKAGES += \
     camera.msm8974 \
     mm-jpeg-interface-test
 
+# FM radio
+PRODUCT_PACKAGES += \
+    FM2 \
+    FMRecord \
+    libqcomfm_jni \
+    qcom.fmradio
+
 # Keystore
 PRODUCT_PACKAGES += \
     keystore.msm8974
