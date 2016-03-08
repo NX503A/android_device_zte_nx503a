@@ -154,8 +154,6 @@ persist.factory.mic_number=13
 dmid=3067269873
 
 # WiFi
-wifi.interface=wlan0
-wifi.supplicant_scan_interval=240
 ro.sys.umsdirtyratio=20
 
 # Set default USB interface

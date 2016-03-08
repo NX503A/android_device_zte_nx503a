@@ -354,6 +354,11 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.nfc.port=I2C
 
+# WiFi
+PRODUCT_PROPERTY_OVERRIDES += \
+    wifi.interface=wlan0 \
+    wifi.supplicant_scan_interval=15
+
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.radio.no_wait_for_card=1
 
