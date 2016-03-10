@@ -159,8 +159,8 @@ dmid=3067269873
 # WiFi
 ro.sys.umsdirtyratio=20
 
-# Set default USB interface
-persist.sys.usb.config=mtp,adb
+#Set composition for USB
+persist.sys.usb.config=diag,modem,mass_storage,adb
 
 # Chip name
 ro.chipname=msm8974
