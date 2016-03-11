@@ -61,7 +61,7 @@
     <integer name="config_safe_media_volume_index">10</integer>
 
     <!-- If this is true, the screen will fade off. -->
-    <bool name="config_animateScreenLights">true</bool>
+    <bool name="config_animateScreenLights">false</bool>
 
     <!-- If true, the screen can be rotated via the accelerometer in all 4
          rotations as the default behavior. -->
